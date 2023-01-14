@@ -1,8 +1,8 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "1be6cb63d1433dc1a6578704cd80fbe72d1e85f04b2e8fcb018fd0a56f1f40f7"
-build_start_time: [1673327817, 517513036]
-build_end_time: [1673327822, 982318878]
+build_start_time: [1673691192, 913908958]
+build_end_time: [1673691194, 207950115]
 inputs:
-  "/Users/securra/Desktop/FlutterProjects/flutter-learning_app/macos/Flutter/GeneratedPluginRegistrant.swift": [1673327807, 745728969]
+  "/Users/securra/Desktop/FlutterProjects/flutter-learning_app/macos/Flutter/GeneratedPluginRegistrant.swift": [1673691185, 279994010]
   "/Users/securra/Desktop/FlutterProjects/flutter-learning_app/macos/Runner/AppDelegate.swift": [1656682103, 0]
   "/Users/securra/Desktop/FlutterProjects/flutter-learning_app/macos/Runner/MainFlutterWindow.swift": [1656682103, 0]

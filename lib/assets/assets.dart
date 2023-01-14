@@ -1,0 +1,1 @@
+export './svgs/svgs.dart';
