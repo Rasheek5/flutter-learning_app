@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,21 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: const MyHomePage(),
+      home: LoginScreen(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Scaffold(
-        body: Text('Home'),
-      ),
     );
   }
 }
