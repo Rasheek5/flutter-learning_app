@@ -7,6 +7,8 @@ import '../../models/models.dart';
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
+  static String routeName = "SignInScreen";
+
   @override
   State<SignInScreen> createState() => _SignInScreenState();
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_app/screens/screens.dart';
 import '../../constants/constants.dart';
 import '../../widgets/widgets.dart';
 import '../../assets/assets.dart';
@@ -54,8 +55,19 @@ class LoginFooter extends StatelessWidget {
     );
   }
 
-  Widget _renderBottomBtn() {
+  void _navigateToNextScreen(BuildContext context) {
+    String navigateTo = componentFor == loginFooterType.login
+        ? LoginScreen.routenName
+        : SignInScreen.routeName;
+
+    Navigator.of(context).pushReplacementNamed(navigateTo);
+  }
+
+  Widget _renderBottomBtn(BuildContext context) {
     return InkWell(
+      onTap: () {
+        _navigateToNextScreen(context);
+      },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -98,7 +110,7 @@ class LoginFooter extends StatelessWidget {
         ),
         const SizedBox(height: 30),
         SizedBox(
-          child: _renderBottomBtn(),
+          child: _renderBottomBtn(context),
         )
       ],
     );
