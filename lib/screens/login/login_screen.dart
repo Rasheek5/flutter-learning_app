@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 import '../../widgets/widgets.dart';
 import '../../assets/assets.dart';
+import '../../models/models.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
+
+  static String routenName = "LoginScreen";
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -75,95 +78,13 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _renderOtherLoginOptionsCard(
-    String label,
-    String icon,
-  ) {
-    return InkWell(
-      onTap: () {},
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(10),
-            margin: const EdgeInsets.symmetric(horizontal: 10),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: ColorConstants.darkCerulean,
-                width: 2.5,
-                style: BorderStyle.solid,
-              ),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: RenderSvgIcon(
-              source: icon,
-              height: 50,
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Text(
-            label,
-            style: const TextStyle(color: Colors.black),
-          )
-        ],
-      ),
-    );
-  }
-
   Widget _renderSubmitButton() {
     return SubmitButton(label: "Log In");
   }
 
-  Widget _renderORText() {
-    return const Text(
-      "or",
-    );
-  }
-
-  Widget _renderSignUpBtn() {
-    return InkWell(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            "Don't have an Account? ",
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              color: Colors.black,
-              fontSize: 17,
-            ),
-          ),
-          Text(
-            "Sign Up",
-            style: TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.w700,
-              color: ColorConstants.darkCerulean,
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
   Widget _rendreFooterContent() {
-    return Column(
-      children: [
-        _renderORText(),
-        const SizedBox(height: 20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _renderOtherLoginOptionsCard("Google", GoogleIcon),
-            _renderOtherLoginOptionsCard("Apple", appleICON),
-          ],
-        ),
-        const SizedBox(height: 30),
-        SizedBox(
-          child: _renderSignUpBtn(),
-        )
-      ],
+    return LoginFooter(
+      componentFor: loginFooterType.login,
     );
   }
 
